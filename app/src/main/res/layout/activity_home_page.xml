@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.type_lunar.jiqu.login">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="#fdddff"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="45dp"
+            android:src="@mipmap/qq"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:text="广州"
+            android:gravity="center"/>
+
+        <android.support.v7.widget.SearchView
+            android:layout_width="260dp"
+            android:layout_height="45dp">
+        </android.support.v7.widget.SearchView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="#beede6"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center"
+        android:id="@+id/linearLayout">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="迹趣" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="地图" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="圈子" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="我" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="#beede6"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        android:id="@+id/linearLayout3">
+
+        <ImageButton
+            android:id="@+id/homepage_jiqu_imageb"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/qq"
+            android:background="#00000000"/>
+
+        <ImageButton
+            android:id="@+id/homepage_ditu_imageb"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/qq"
+            android:background="#00000000"/>
+
+        <ImageButton
+            android:id="@+id/homepage_quanzi_imageb"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/qq"
+            android:background="#00000000"/>
+
+        <ImageButton
+            android:id="@+id/homepage_wo_imageb"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/qq"
+            android:background="#00000000"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:background="#e6e6e6"
+        app:layout_constraintTop_toBottomOf="@+id/homepage_stackview"
+        android:id="@+id/linearLayout4">
+        <TextView android:id="@+id/homepage_remen_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="热门"
+            android:textColor="@color/colorAccent"/>
+        <View
+            android:layout_width="33dp"
+            android:layout_height="5dp"/>
+        <TextView android:id="@+id/homepage_guanzhu_text"
+            android:textSize="24sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="关注"/>
+    </LinearLayout>
+
+    <StackView
+        android:id="@+id/homepage_stackview"
+        android:layout_width="0dp"
+        android:background="#fdddff"
+        android:layout_height="180dp"
+        android:loopViews="true"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+    <GridView android:id="@+id/homepage_rimen_grid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:numColumns="2"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+    </GridView>
+    <ListView android:id="@+id/homepage_guanzhu_list"
+        android:visibility="invisible"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+    </ListView>
+</android.support.constraint.ConstraintLayout>
